@@ -1,0 +1,267 @@
+{% extends "base.html" %}
+
+{% block title %}Terms and Conditions — Spendly{% endblock %}
+
+{% block head %}
+<style>
+    .legal-section {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 4rem 2rem 6rem;
+    }
+
+    .legal-header {
+        margin-bottom: 3rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 2rem;
+    }
+
+    .legal-badge {
+        display: inline-block;
+        background: var(--accent-light);
+        color: var(--accent);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        margin-bottom: 1rem;
+    }
+
+    .legal-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--ink);
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
+    }
+
+    .legal-meta {
+        font-size: 0.85rem;
+        color: var(--ink-faint);
+    }
+
+    .legal-toc {
+        background: var(--paper-warm);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.5rem 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .legal-toc h2 {
+        font-family: var(--font-body);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        margin-bottom: 0.75rem;
+    }
+
+    .legal-toc ol {
+        margin: 0;
+        padding-left: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .legal-toc a {
+        font-size: 0.9rem;
+        color: var(--accent);
+        font-weight: 500;
+    }
+
+    .legal-toc a:hover { text-decoration: underline; }
+
+    .legal-body { display: flex; flex-direction: column; gap: 2.5rem; }
+
+    .legal-clause {
+        background: var(--paper-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 2rem;
+    }
+
+    .clause-number {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin-bottom: 0.4rem;
+    }
+
+    .clause-title {
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        color: var(--ink);
+        margin-bottom: 1rem;
+    }
+
+    .clause-body {
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        line-height: 1.75;
+    }
+
+    .clause-body p + p { margin-top: 0.75rem; }
+
+    .clause-body ul {
+        margin: 0.75rem 0 0.75rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .clause-body li { color: var(--ink-soft); }
+
+    .legal-footer-note {
+        margin-top: 3rem;
+        padding: 1.5rem 2rem;
+        background: var(--accent-light);
+        border: 1px solid #c5d9c9;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        color: var(--accent);
+        line-height: 1.7;
+    }
+
+    .legal-footer-note strong { font-weight: 600; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="legal-section">
+
+    <header class="legal-header">
+        <div class="legal-badge">Legal</div>
+        <h1 class="legal-title">Terms and Conditions</h1>
+        <p class="legal-meta">Last updated: April 14, 2026 &nbsp;·&nbsp; Effective immediately upon registration</p>
+    </header>
+
+    <nav class="legal-toc">
+        <h2>On this page</h2>
+        <ol>
+            <li><a href="#acceptance">Acceptance of Terms</a></li>
+            <li><a href="#use">Use of the Service</a></li>
+            <li><a href="#accounts">User Accounts</a></li>
+            <li><a href="#data">Your Data</a></li>
+            <li><a href="#prohibited">Prohibited Conduct</a></li>
+            <li><a href="#liability">Limitation of Liability</a></li>
+            <li><a href="#termination">Termination</a></li>
+            <li><a href="#changes">Changes to These Terms</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ol>
+    </nav>
+
+    <div class="legal-body">
+
+        <div class="legal-clause" id="acceptance">
+            <p class="clause-number">Section 01</p>
+            <h2 class="clause-title">Acceptance of Terms</h2>
+            <div class="clause-body">
+                <p>By accessing or using Spendly ("the Service"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the Service.</p>
+                <p>These terms apply to all visitors, users, and others who access or use Spendly. By creating an account, you confirm that you are at least 13 years of age and have the legal capacity to enter into this agreement.</p>
+            </div>
+        </div>
+
+        <div class="legal-clause" id="use">
+            <p class="clause-number">Section 02</p>
+            <h2 class="clause-title">Use of the Service</h2>
+            <div class="clause-body">
+                <p>Spendly is a personal expense-tracking tool intended for individual financial management. You may use the Service to:</p>
+                <ul>
+                    <li>Log and categorise personal expenses</li>
+                    <li>View spending summaries and trends</li>
+                    <li>Manage your financial records for personal use</li>
+                </ul>
+                <p>The Service is provided for personal, non-commercial use only. Reselling, sublicensing, or redistributing access to the Service is not permitted.</p>
+            </div>
+        </div>
+
+        <div class="legal-clause" id="accounts">
+            <p class="clause-number">Section 03</p>
+            <h2 class="clause-title">User Accounts</h2>
+            <div class="clause-body">
+                <p>You are responsible for maintaining the confidentiality of your account credentials. All activity that occurs under your account is your responsibility. Please notify us immediately if you suspect unauthorised access to your account.</p>
+                <p>You agree to provide accurate, current, and complete information during registration and to keep it up to date. Accounts created with false information may be suspended or deleted without notice.</p>
+            </div>
+        </div>
+
+        <div class="legal-clause" id="data">
+            <p class="clause-number">Section 04</p>
+            <h2 class="clause-title">Your Data</h2>
+            <div class="clause-body">
+                <p>You retain full ownership of all expense data you enter into Spendly. We do not sell your financial data to third parties.</p>
+                <p>By using the Service, you grant Spendly a limited licence to store and process your data solely to provide the features of the application. We may use anonymised, aggregated data for product improvement purposes — this data cannot be traced back to individual users.</p>
+                <p>You can export or delete your data at any time from your account settings.</p>
+            </div>
+        </div>
+
+        <div class="legal-clause" id="prohibited">
+            <p class="clause-number">Section 05</p>
+            <h2 class="clause-title">Prohibited Conduct</h2>
+            <div class="clause-body">
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use the Service for any unlawful purpose or in violation of any applicable laws</li>
+                    <li>Attempt to gain unauthorised access to any part of the Service or its infrastructure</li>
+                    <li>Introduce malicious code, viruses, or any software intended to disrupt the Service</li>
+                    <li>Scrape, crawl, or otherwise harvest data from the Service without prior written consent</li>
+                    <li>Impersonate another person or entity</li>
+                </ul>
+                <p>Violation of these prohibitions may result in immediate account termination and, where applicable, legal action.</p>
+            </div>
+        </div>
+
+        <div class="legal-clause" id="liability">
+            <p class="clause-number">Section 06</p>
+            <h2 class="clause-title">Limitation of Liability</h2>
+            <div class="clause-body">
+                <p>Spendly is provided "as is" without warranties of any kind, express or implied. We do not guarantee that the Service will be uninterrupted, error-free, or completely secure.</p>
+                <p>To the maximum extent permitted by law, Spendly and its developers shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of — or inability to use — the Service, including but not limited to loss of data or financial decisions made based on information within the app.</p>
+                <p>Spendly is a personal finance logging tool and does not constitute financial advice.</p>
+            </div>
+        </div>
+
+        <div class="legal-clause" id="termination">
+            <p class="clause-number">Section 07</p>
+            <h2 class="clause-title">Termination</h2>
+            <div class="clause-body">
+                <p>You may delete your account at any time. Upon deletion, your personal data will be removed from our systems within 30 days, except where retention is required by law.</p>
+                <p>We reserve the right to suspend or terminate your account without notice if you violate these Terms, engage in fraudulent activity, or if we discontinue the Service.</p>
+            </div>
+        </div>
+
+        <div class="legal-clause" id="changes">
+            <p class="clause-number">Section 08</p>
+            <h2 class="clause-title">Changes to These Terms</h2>
+            <div class="clause-body">
+                <p>We may update these Terms from time to time. When we do, we will revise the "Last updated" date at the top of this page. Continued use of the Service after changes are posted constitutes your acceptance of the revised Terms.</p>
+                <p>For significant changes, we will make reasonable efforts to notify registered users via email or an in-app notice.</p>
+            </div>
+        </div>
+
+        <div class="legal-clause" id="contact">
+            <p class="clause-number">Section 09</p>
+            <h2 class="clause-title">Contact Us</h2>
+            <div class="clause-body">
+                <p>If you have questions about these Terms, please reach out to us:</p>
+                <ul>
+                    <li><strong>Email:</strong> legal@spendly.app</li>
+                    <li><strong>Response time:</strong> We aim to respond within 5 business days</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="legal-footer-note">
+        <strong>Summary in plain language:</strong> Use Spendly to track your own expenses. Keep your account secure. Your data is yours — we don't sell it. Don't misuse the Service. These terms may change, and we'll let you know when they do.
+    </div>
+
+</div>
+{% endblock %}
